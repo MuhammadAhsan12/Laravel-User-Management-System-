@@ -25,15 +25,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {{$i = 1;}}
                                 @foreach ($users as $user)
                                 <tr>
-                                    <td>{{$i}}</td>
+                                    <td>{{$loop->iteration}}</td>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td><span class="badge badge-success">Active</span></td>
                                 </tr>
-                                {{$i++}}
                                 @endforeach
                             </tbody>
                         </table>
